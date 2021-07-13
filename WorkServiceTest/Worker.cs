@@ -35,7 +35,6 @@ namespace WorkServiceTest
                 {
                     var message = Encoding.UTF8.GetString(ea.Body.ToArray());
                     Console.WriteLine(" [x] Received {0}", message);
-
                 };
                 channel.BasicConsume(queue: "publish-test", autoAck: false, consumer: consumer);
 
