@@ -27,7 +27,6 @@ namespace WorkServiceTest
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            //kasc
             using (var channel = _rabbitMq.GetConnection().CreateModel())
             {
                 channel.QueueDeclare("publish-test", true, false, false, null);
